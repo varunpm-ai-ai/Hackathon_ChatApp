@@ -80,6 +80,10 @@ This repo is a hackathon project — lightweight and iterative. If you'd like to
 2. Add small, focused commits with clear messages.
 3. Open a PR describing the change and how to test it.
 
+## Credits
+
+Special thanks to [Rakx-prabhu](https://github.com/Rakx-prabhu) for collaborating during the hackathon and contributing to the project.
+
 ## License
 
 This project currently contains a `LICENSE` file at the repo root. Follow the license terms included there.

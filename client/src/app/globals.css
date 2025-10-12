@@ -119,6 +119,27 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.scrollbar-none, .scrollbar-none * {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important;    /* Firefox */
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari */
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.scrollbar-none [data-slot="scroll-area-scrollbar"],
+.scrollbar-none [data-slot="scroll-area-thumb"],
+.scrollbar-none [data-slot="scroll-area-corner"] {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

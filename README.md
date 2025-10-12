@@ -8,6 +8,9 @@ This README documents how to run the app locally, what's inside the repository, 
 
 ### Screen shots 
 ![img alt](https://github.com/varunpm-ai-ai/Hackathon_ChatApp/blob/main/Screenshot%202025-10-12%20144756.png?raw=true)
+<div align="center" >
+  <img src="https://github.com/varunpm-ai-ai/Hackathon_ChatApp/blob/main/Screenshot%202025-10-12%20144817.png?raw=true" alt="img2" width=400 />
+</div>
 
 ## Repository structure
 

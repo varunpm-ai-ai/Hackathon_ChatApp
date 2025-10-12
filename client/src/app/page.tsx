@@ -1,9 +1,10 @@
-import React from 'react'
+"use client";
+
+import React from "react";
+import ServerPanel from "./components/navigation/ServerPanel";
 
 const page = () => {
-  return (
-    <div className='text-3xl text-blue-600 font-bold'>Hellow Hackathon Chat App</div>
-  )
-}
+  return <ServerPanel />;
+};
 
-export default page
+export default page;

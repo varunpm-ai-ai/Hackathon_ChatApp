@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import NavigationSidebar from "./components/navigation/NavigationSidebar";
+import ServerProvider from "./components/ServerProvider";
 
 const font = Open_Sans({
   subsets: ["latin"],
@@ -16,15 +17,17 @@ const MainLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body className={`${font.className} dark`}>
-        <div className="h-full">
-          <div
-            className=" h-full w-[72px]
+        <ServerProvider>
+          <div className="h-full">
+            <div
+              className=" h-full w-[72px]
             z-30 flex-col fixed inset-y-0"
-          >
-            <NavigationSidebar/>
+            >
+              <NavigationSidebar />
+            </div>
+            <main className="md:pl-[72px] h-full">{children}</main>
           </div>
-          <main className="md:pl-[72px] h-full">{children}</main>
-        </div>
+        </ServerProvider>
       </body>
     </html>
   );

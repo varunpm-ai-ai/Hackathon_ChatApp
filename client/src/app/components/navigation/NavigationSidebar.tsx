@@ -5,10 +5,11 @@ import NavigationAction from "./NavigationAction";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import NavigationItem from "./NavigationItem";
+import { useServer } from "../ServerProvider";
 
 const NavigationSidebar = () => {
   const [navigationItems, setNavigationItems] = useState([{ id: "home" }]);
-  const [activeId, setActiveId] = useState<string | null>(null);
+  const { selectedServer, setSelectedServer } = useServer();
   const [contextMenu, setContextMenu] = useState<{
     id: string;
     x: number;
@@ -21,12 +22,12 @@ const NavigationSidebar = () => {
   };
 
   const handleSelect = (id: string) => {
-    setActiveId(id);
+    setSelectedServer(id);
   };
 
   const handleRemove = (id: string) => {
     setNavigationItems((prev) => prev.filter((item) => item.id !== id));
-    if (activeId === id) setActiveId(null);
+    if (selectedServer === id) setSelectedServer(null);
     setContextMenu(null);
   };
 
@@ -48,7 +49,7 @@ const NavigationSidebar = () => {
           <div key={item.id} className=" mb-4 ">
             <NavigationItem
               id={item.id}
-              active={activeId === item.id}
+              active={selectedServer === item.id}
               onSelect={() => handleSelect(item.id)}
               onRightClick={(e) => handleContextMenu(e, item.id)}
             />

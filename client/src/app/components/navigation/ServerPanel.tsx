@@ -45,7 +45,7 @@ const ServerPanel = () => {
           <h3 className="text-lg font-semibold mb-2">
             #{selectedServer}-general
           </h3>
-          <div className="space-y-3 mt-4 flex-1 overflow-y-auto">
+          <div className="space-y-3 mt-4 flex-1 overflow-y-auto scrollbar-none ">
             <div className="text-sm text-zinc-300">
               Demo message in the channel.
             </div>

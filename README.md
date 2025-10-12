@@ -1,10 +1,14 @@
 # Hackathon_ChatApp
 
-A lightweight chat/demo application built during a hackathon. The project contains a Next.js React frontend (client) and a small Elixir backend (server) using Plug + Cowboy. The UI is inspired by Discord-style server/channel panels but kept intentionally simple for fast iteration.
-
-This README documents how to run the app locally, what's inside the repository, and recommended next steps.
+A lightweight chat/demo application built during a hackathon. The project contains a Next.js React frontend (client) and a small Elixir backend (server) using Plug + Cowboy. The UI is inspired by Discord-style server/channel panels but kept it simple for fast iteration.
 
 ---
+
+### Screen shots 
+![img alt](https://github.com/varunpm-ai-ai/Hackathon_ChatApp/blob/main/Screenshot%202025-10-12%20144756.png?raw=true)
+<div align="center" >
+  <img src="https://github.com/varunpm-ai-ai/Hackathon_ChatApp/blob/main/Screenshot%202025-10-12%20144817.png?raw=true" alt="img2" width=400 />
+</div>
 
 ## Repository structure
 

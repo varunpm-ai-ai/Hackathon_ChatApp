@@ -1,0 +1,9 @@
+{application,chat_app,
+             [{modules,['Elixir.ChatApp','Elixir.ChatApp.Application',
+                        'Elixir.ChatAppWeb']},
+              {optional_applications,[]},
+              {applications,[kernel,stdlib,elixir,logger,plug_cowboy,jason,
+                             cors_plug]},
+              {description,"chat_app"},
+              {registered,[]},
+              {vsn,"0.1.0"}]}.

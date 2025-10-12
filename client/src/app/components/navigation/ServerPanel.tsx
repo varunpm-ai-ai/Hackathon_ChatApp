@@ -1,12 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useServer } from "../ServerProvider";
 import { Separator } from "@radix-ui/react-separator";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 const ServerPanel = () => {
+  const [messages, setMessages] = useState<any[]>([]);
+  const [input, setInput] = useState("");
   const { selectedServer } = useServer();
 
   if (!selectedServer) {
@@ -19,6 +21,23 @@ const ServerPanel = () => {
       </div>
     );
   }
+
+  const fetchMessages = async () => {
+    const res = await fetch("http://localhost:4001/messages");
+    const data = await res.json();
+    setMessages(data);
+  };
+
+  const sendMessage = async () => {
+    if (!input.trim()) return;
+    await fetch("http://localhost:4001/messages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ user: "Varun", text: input }),
+    });
+    setInput("");
+    fetchMessages();
+  };
 
   return (
     <div className="h-screen flex">
@@ -49,11 +68,26 @@ const ServerPanel = () => {
             <div className="text-sm text-zinc-300">
               Demo message in the channel.
             </div>
-            <div className="text-sm text-zinc-300">Another message</div>
+            {messages.map((msg, i) => (
+              <div key={i} className="text-sm text-zinc-300">
+                <b>{msg.user}:</b> {msg.text}
+              </div>
+            ))}
           </div>
           <div className="flex items-center gap-2 mt-4">
-            <Input className="h-10 flex-1" placeholder="Message" />
-            <Button variant="outline" className="h-10 flex-shrink-0">Send</Button>
+            <Input
+              value={input}
+              className="h-10 flex-1"
+              placeholder="Message"
+              onChange={(e) => setInput(e.target.value)}
+            />
+            <Button
+              onClick={sendMessage}
+              variant="outline"
+              className="h-10 flex-shrink-0"
+            >
+              Send
+            </Button>
           </div>
         </div>
       </section>

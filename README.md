@@ -6,6 +6,9 @@ This README documents how to run the app locally, what's inside the repository, 
 
 ---
 
+### Screen shots 
+![img alt]()
+
 ## Repository structure
 
 - `client/` — Next.js (App Router) frontend using React + TailwindCSS. Contains UI components, pages, and client-only behaviour.

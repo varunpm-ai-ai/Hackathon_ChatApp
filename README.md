@@ -86,18 +86,10 @@ This repo is a hackathon project — lightweight and iterative. If you'd like to
 
 ## Credits
 
-Special thanks to [Rakx-prabhu](https://github.com/Rakx-prabhu) for collaborating during the hackathon and contributing to the project.
+Special thanks to [Rakx-prabhu](https://github.com/Rakx-prabhu)
+[parthacm](https://github.com/parthacm2004-netizen)
+for collaborating during the hackathon and contributing to the project.
 
 ## License
 
-This project currently contains a `LICENSE` file at the repo root. Follow the license terms included there.
-
----
-
-If you'd like, I can:
-
-- Add a more detailed install guide for Windows-specific dev setup (Elixir/Erlang install steps).
-- Implement route-based server URLs and a simple in-memory message store to demo messaging.
-- Create a small `README` inside `client/` pointing to only the frontend instructions (or vice versa for the server).
-
-Tell me which of the next tasks you want me to take on and I'll implement them.
+This project currently contains a `LICENSE` file at the repo root. Follow the license terms included.
